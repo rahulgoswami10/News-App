@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- material icons cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- css file -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>News app</title>
+</head>
+<body>
+
+    <!-- Nav Starts -->
+    <nav>
+        <div class="main-nav container">
+            <a href="#" class="logo" id="home">
+                <!-- <img src="./assets/logo1.png" alt="company logo"> -->
+                 <h3 class="logo__heading">Daily <span>Times</span></h3>
+            </a>
+            <div class="navbar">
+                <ul class="nav__links">
+                    <li class="nav__link nav-item" id="india" onclick="onNavItemClick('india')">Home</li>
+                    <li class="nav__link nav-item" id="science" onclick="onNavItemClick('science')">Science</li>
+                    <li class="nav__link nav-item" id="tech" onclick="onNavItemClick('tech')">Tech</li>
+                    <li class="nav__link nav-item" id="business" onclick="onNavItemClick('business')">Business</li>
+                    <li class="nav__link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                    <li class="nav__link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                </ul>
+            </div>
+            <div class="search__bar">
+                <input id="search-text" type="text" class="news__input" placeholder="e.g. Science">
+                <button id="search-button" class="search__button">Search</button>
+            </div>
+            <button class="menu__btn">
+                <span class="material-icons-sharp">menu</span>
+            </button>
+            <button class="close__btn">
+                <span class="material-icons-sharp">close</span>
+            </button>
+
+            <!-- mobile version navbar -->
+            <div class="mobile">
+                <ul class="links">
+                    <li class="link" id="ipl" onclick="onNavItemClick('ipl')">Home</li>
+                    <li class="link" id="soccer" onclick="onNavItemClick('soccer')">Science</li>
+                    <li class="link" id="politics" onclick="onNavItemClick('politics')">Tech</li>
+                    <li class="link" id="politics" onclick="onNavItemClick('politics')">Business</li>
+                    <li class="link" id="politics" onclick="onNavItemClick('politics')">Sports</li>
+                    <li class="link" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                </ul>
+                <div class="search">
+                    <input type="text" class="news__input" placeholder="e.g. Science">
+                    <button class="search__button">
+                        <span class="material-icons-sharp">search</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Nav Ends -->
+
+
+
+    <!-- Main Starts -->
+    <main>
+        <div class="cards__container container" id="cards-container">
+
+        </div>
+    </main>
+    <!-- Main Ends -->
+    
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card__image">
+                <img src="./assets/article1.png" alt="news image" id="news-img">
+            </div>
+            <div class="card__content">
+                <h3 id="news-title">Barcelona wins Spanish Super Cup</h3>
+                <h6 class="news__source" id="news-source">Football World 03/04/2024</h6>
+                <p class="news__desc" id="news-desc">
+                    Lorem ipsum dolor, sit amet consectetur 
+                    adipisicing elit. Cum, assumenda ipsum. 
+                    Accusantium ab atque ipsa tempora eveniet!
+                    Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+        </div>
+    </template>
+
+<script src="./Js/main.js"></script>    
+</body>
